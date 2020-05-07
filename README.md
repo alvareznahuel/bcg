@@ -40,4 +40,21 @@ To emulate a real game we need cover the next functions:
 | | bulks | Array | A list of bulk identifiers into the game.
 | players | id | Number | An unique player id.
 | | name | String | A name or nickname for the player.
+| | token | String | Hash for the session token to check user identity inside the game.
+| | dueDate | Date | 24 hours after creation date.
+
+# Frontend desing guidelines
+
+A preliminar visualization of the board would be:
+
+| Another players bulk 0 | Another players bulk 1 | ... | Another players bulk N |
+|------------------------|------------------------| ----|------------------------|
+| Public bulk 0 | Public bulk 1 | ,,, | Public bulk N |
+| Current player bulk 0 | Current player bulk 1 | ... | Current player bulk N |
+
+# Stories
+
+- [ ] Story 0 
+- [ ] Story 1
+- [ ] Story 2
 
