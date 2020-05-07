@@ -45,7 +45,7 @@ To emulate a real game we need cover the next functions:
 
 # Frontend desing guidelines
 
-A preliminar visualization of the board would be:
+A preliminary visualization of the board would be:
 
 | Another players bulk 0 | Another players bulk 1 | ... | Another players bulk N |
 |------------------------|------------------------| ----|------------------------|
