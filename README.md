@@ -12,10 +12,8 @@ To emulate a real game we need cover the next functions:
 Resource|Field|Type|Description
 --------|-----|----|-----------
 suits | id | Number | Identified for a card suit
- | name | String | Name for a card suit.
- | imageURL | String | URL to a card suit image.
--|----------|--------|---------------------------
+suits | name | String | Name for a card suit.
+suits | imageURL | String | URL to a card suit image.
 cards | id | Number | Identified for a card.
- | name | String | Name for a card.
- | value | String | Card value.
--|-------|--------|-------------
+cards | name | String | Name for a card.
+cards | value | String | Card value.
