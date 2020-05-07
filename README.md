@@ -54,7 +54,7 @@ A preliminary visualization of the board would be:
 
 # Stories
 
-- [ ] Story 0 
-- [ ] Story 1
-- [ ] Story 2
+- [ ] An user arrives to the website an becomes a player.
+- [ ] An user arrives to the website an becomes a player, then close the session with a button and their player info is deleted.
+- [ ] An user arrives to the website an becomes a player, then he create a game and after close de session with a button and their created game and player info is deleted.
 
