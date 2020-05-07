@@ -9,11 +9,11 @@ To emulate a real game we need cover the next functions:
 
 # Backend API resources
 
-Resource|Field|Type|Description
---------|-----|----|-----------
-suits | id | Number | Identified for a card suit
-suits | name | String | Name for a card suit.
-suits | imageURL | String | URL to a card suit image.
-cards | id | Number | Identified for a card.
-cards | name | String | Name for a card.
-cards | value | String | Card value.
+|Resource|Field|Type|Description
+|--------|-----|----|:-----------
+|suits | id | Number | Identified for a card suit
+|  | name | String | Name for a card suit.
+|  | imageURL | String | URL to a card suit image.
+|cards | id | Number | Identified for a card.
+|  | name | String | Name for a card.
+|  | value | String | Card value.
