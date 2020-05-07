@@ -9,6 +9,16 @@ To emulate a real game we need cover the next functions:
 
 # Backend API resources
 
+|Resource|Description|
+|--------|-----------|
+|suits   | A suit is one of the categories into which the cards of a deck are divided.
+|cards   | A card is the minimal element of a deck.
+|deck    | A set of cards usually solded together.
+|bulk    | A set of cards that are a part of a deck.
+|game    | A game is a players session. A game can contain a set of bulks where are the diferents part of a deck.
+|players | A player is an user of the game. A player can create a game to enjoy alone or create a game to invite another players.
+
+
 |Resource|Field|Type|Description
 |--------|-----|----|:-----------
 |suits | id | Number | Identified for a card suit
