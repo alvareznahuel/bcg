@@ -1,0 +1,23 @@
+{
+  "name": "bcg-client",
+  "version": "1.0.0",
+  "description": "Built-in card games frontend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "card",
+    "game"
+  ],
+  "author": "Nahuel H. Alvarez",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "next": "^9.3.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
