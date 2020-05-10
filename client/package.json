@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
+    "dev": "NODE_ENV=development node server.js",
     "build": "next build",
     "start": "next start"
   },
@@ -16,6 +16,7 @@
   "author": "Nahuel H. Alvarez",
   "license": "Apache-2.0",
   "dependencies": {
+    "express": "^4.17.1",
     "next": "^9.3.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
