@@ -11,7 +11,7 @@ module.exports = async function({
   const server = express();
   await app.prepare();
   await beforeNext(server);
-  server.use(express.static(`${dir}/static`));
+  server.use(express.static(`${dir}/public`));
   server.get('*', (req, res) => handle(req, res));
   server.listen(port, err => {
     if (err) throw err;
