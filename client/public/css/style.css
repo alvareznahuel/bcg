@@ -1,0 +1,46 @@
+* { 
+    margin: 0;
+    padding: 0; 
+}
+html, body {
+    height: 100%;
+    background: green;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+#container {
+    min-height: 100%;
+}
+#app {
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 50px;
+}
+#footer {
+    height: 50px;
+    margin-top: -50px;
+    position: relative;
+    clear: both;
+    background-color: green;
+    text-align: right;
+}
+#header {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-size: large;
+    display: block;
+}
+#title {
+    width: 70%;
+    display: inline-block;
+}
+#auth {
+    width: 29%;
+    display: inline-block;
+}
+.oper {
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+}
