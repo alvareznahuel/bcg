@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Buil-in card games</title>
+  <title>Built-in card games</title>
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-  <div id="app">
-    {{ message }}
-  </div>
-
+  <main id="container">
+    <!-- The Vue.js App not include de Web Page footer.-->
+    <div id="app">
+      <div id="header">
+        <div id="title"><span>Built-in card games</span> </div>
+        <div id="auth"></div>  
+      </div>
+      <div>
+      {{ message }}
+      </div>
+    </div>  
+  </main>
+  <footer id="footer">
+    <p>B.C.G. is powered by Vue.js!</p>
+  </footer>
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'B.C.G. is powered by Vue.js!'
+        message: 'W.I.P.'
       }
     })
+    if(sessionStorage) {
+      checkAuth()
+    } else {
+        alert("No soporta session storage")
+    }
+    function checkAuth() {
+        var user = sessionStorage.getItem("user")
+        if(user) {
+            document.getElementById("auth").innerHTML = "<p><b>Hola " + user + "!</b></p>"
+        } else {
+            document.getElementById("auth").innerHTML = "<span onclick='login()'>Log In</span>|<span onclick='signup()'>Sign Up</span>"
+        } 
+    }
+    function login() {
+        alert("LOGIN!!");
+        sessionStorage.setItem("user","Usuario");
+        checkAuth();
+    }
+    function signup() {
+        alert("SIGNUP!!");
+        checkAuth();
+    }
   </script>
 </body>
 </html>
