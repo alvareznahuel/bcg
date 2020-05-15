@@ -3,6 +3,8 @@
 <head>
   <title>Built-in card games</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="806187665666-es7be8j1ea6avmfmcdq7hdcelf261r1k.apps.googleusercontent.com">
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
@@ -36,19 +38,28 @@
     function checkAuth() {
         var user = sessionStorage.getItem("user")
         if(user) {
-            document.getElementById("auth").innerHTML = "<p><b>Hola " + user + "!</b></p>"
+            document.getElementById("auth").innerHTML = "<p><b>Hola " + user + "!</b></p><a href='#'' onclick='signOut();''>Sign out</a>"
         } else {
-            document.getElementById("auth").innerHTML = "<span onclick='login()'>Log In</span>|<span onclick='signup()'>Sign Up</span>"
+            document.getElementById("auth").innerHTML = "<div class='g-signin2' data-onsuccess='onSignIn'></div>"
         } 
     }
-    function login() {
-        alert("LOGIN!!");
-        sessionStorage.setItem("user","Usuario");
-        checkAuth();
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      sessionStorage.setItem("user",profile.getName());
+      checkAuth();
     }
-    function signup() {
-        alert("SIGNUP!!");
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+        sessionStorage.removeItem("user")
         checkAuth();
+        location.reload();
+      });
     }
   </script>
 </body>
