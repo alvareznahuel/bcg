@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Built-in card games. Play cards like a real life.">
+  <meta name="author" content="AVIZA dev team">
   <title>Built-in card games</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -12,7 +15,8 @@
     <!-- The Vue.js App not include de Web Page footer.-->
     <div id="app">
       <div id="header">
-        <div id="title"><span>Built-in card games</span> </div>
+        <div id="title"><p></p>Built-in card games</p></div>
+        <div id="headerspace"></div>
         <div id="auth"><div class='g-signin2' data-onsuccess='onSignIn'></div></div>  
       </div>
       <div>
@@ -38,7 +42,7 @@
     function checkAuth() {
         var user = sessionStorage.getItem("user")
         if(user) {
-            document.getElementById("auth").innerHTML = "<p><b>Hola " + user + "!</b></p><a href='#'' onclick='signOut();''>Sign out</a>"
+            document.getElementById("auth").innerHTML = "<p>Player: <b>" + user + "</b></p><a href='#'' onclick='signOut();''>Sign out</a>"
         } else {
             document.getElementById("auth").innerHTML = "<div class='g-signin2' data-onsuccess='onSignIn'></div>"
         } 
