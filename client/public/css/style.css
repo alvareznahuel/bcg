@@ -14,26 +14,36 @@ html, body {
 #app {
     overflow: auto;
     height: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 2em;
 }
 #footer {
-    height: 50px;
-    margin-top: -50px;
+    height: 2em;
+    margin-top: -2em;
     position: relative;
     clear: both;
     background-color: green;
     text-align: right;
+    padding: 0.5em;
 }
 #header {
     width: 100%;
+    min-width: 120px;
     background-color: white;
     color: black;
     font-size: large;
-    display: inline-flex;
+    display: flex;
+    justify-content: flex-end;
 }
 #title {
-    width: 80%;
+    padding: 10px;
+    min-width: 100px;
+}
+#headerspace {
+    width: 100%;
+    min-width: 0;
 }
 #auth {
-    width: 20%;
+    padding: 10px;
+    min-width: 120px;
+    justify-content: flex-end;
 }
