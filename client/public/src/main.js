@@ -3,7 +3,8 @@ var app = new Vue({
   data: {
     message: 'W.I.P.',
     user: null,
-    signedin: false
+    signedin: false,
+    stage: 0
   },
   methods: {
     checkAuth: function checkAuth() {
@@ -13,12 +14,15 @@ var app = new Vue({
         this.user = sessionStorage.getItem("user");
         if(this.user) {
             this.signedin = true;
+            this.stage = 1;
         } else {
             this.signedin = false;
+            this.stage = 0;
         }
       } else {
         this.user = null;
         this.signedin = false;
+        this.stage = 0;
       }
       //console.log(this.signedin);
       return;

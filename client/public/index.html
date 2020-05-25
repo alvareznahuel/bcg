@@ -18,8 +18,8 @@
         <div id="title"><p>Built-in card games</p></div>
         <div id="headerspace"></div>
         <div id="auth">
-          <div v-show="signedin"><p>Player: <b>{{user}}</b></p><a href="#" onclick="signOut();">Sign out</a></div>
-          <div v-show="!signedin" class='g-signin2' data-onsuccess='onSignIn'></div>
+          <div v-show="stage==1"><p>Player: <b>{{user}}</b></p><a href="#" onclick="signOut();">Sign out</a></div>
+          <div v-show="stage==0" class='g-signin2' data-onsuccess='onSignIn'></div>
         </div>  
       </div>
       <div>
