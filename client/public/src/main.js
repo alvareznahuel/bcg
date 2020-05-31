@@ -4,7 +4,8 @@ var app = new Vue({
     message: 'W.I.P.',
     user: null,
     signedin: false,
-    stage: 0
+    stage: 0,
+    gamecode: "XDFTDO"
   },
   methods: {
     checkAuth: function checkAuth() {
@@ -26,6 +27,34 @@ var app = new Vue({
       }
       //console.log(this.signedin);
       return;
+    },
+    createGame: function createGame() {
+        this.stage = 2;
+        return;
+    },
+    joinGame: function joinGame() {
+        this.stage = 3;
+        return;
+    },
+    setupGame: function setupGame() {
+        alert("Defining game attributes...");
+        this.stage = 4;
+        return;
+    },
+    signinGame: function signinGame() {
+        alert("Checking game code...");
+        this.stage = 5;
+        return;
+    },
+    initGame: function initGame() {
+        alert("Activating the defined game...");
+        this.stage = 5;
+        return;
+    },
+    startGame: function startGame() {
+        alert("Launching the game board...");
+        this.stage = 6;
+        return;
     } 
   }
 })
