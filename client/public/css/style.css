@@ -48,3 +48,6 @@ html, body {
     min-width: 120px;
     justify-content: flex-end;
 }
+.button {
+    padding: 5px;
+}
