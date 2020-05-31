@@ -18,18 +18,73 @@
         <div id="title"><p>Built-in card games</p></div>
         <div id="headerspace"></div>
         <div id="auth">
-          <div v-show="signedin"><p>Player: <b>{{user}}</b></p><a href="#" onclick="signOut();">Sign out</a></div>
-          <div v-show="!signedin" class='g-signin2' data-onsuccess='onSignIn'></div>
+          <div v-show="stage!=0"><p></p><a href="#" onclick="signOut();">Sign out</a></div>
+          <div v-show="stage==0"></div>
         </div>  
       </div>
       <div>
-      {{ message }}
-      </div>
+        <div v-show="stage==0">
+          <br>
+          <h2> ¡Bienvendio a Built-in Card Games! </h2>
+          <br>
+          <p> Te vamos a pedir que te identifiques para que peudas crear o unirte a una partida. Esperamos que te diviertas.</p>
+          <br>
+          <div class="buttonsbar"><div class='g-signin2' data-onsuccess='onSignIn'></div></div>
+        </div>
+        <div v-show="stage==1">
+          <br>
+          <h2> Hola {{user}} </h2>
+          <br>
+          <p> Si eres el anfitrion del juego debes crear la partida, seleccionar el maso de cartas a utilizar y definir la distribución del tablero de juegos. Si, por el contrario, deseas unirte a una partida selecciona esta opción.</p>
+          <br>
+          <div class="buttonsbar"><a class="button" href="#" v-on:click="createGame()">Crear</a><a class="button" href="#" v-on:click="joinGame()">Unirse</a></div>
+        </div>
+        <div v-show="stage==2">
+          <br>
+          <h2> Define el juego </h2>
+          <br>
+          <p> Aqui se define el juego y la cantidad de jugadores..</p>
+          <br>
+          <p> WIP </p>
+          <div class="buttonsbar"><a class="button" href="#" v-on:click="setupGame()">Siguiente</a></div>
+        </div>
+        <div v-show="stage==3">
+          <br>
+          <h2> Unete al juego </h2>
+          <br>
+          <p> Ingresa el código que te compartió tu anfitrion y unete a la partida..</p>
+          <br>
+          <input type="text">
+          <div class="buttonsbar"><a class="button" href="#" v-on:click="signinGame()">Siguiente</a></div>
+        </div>
+        <div v-show="stage==4">
+          <br>
+          <h2> Invita a tus amigos </h2>
+          <br>
+          <p> Se genero la partida, invite a sus amigos con el código {{gamecode}}.</p>
+          <br>
+          <div class="buttonsbar"><a class="button" href="#" v-on:click="initGame()">Siguiente</a></div>
+        </div>
+        <div v-show="stage==5">
+          <br>
+          <h2> Espera a que tus amigos se unan al juego </h2>
+          <br>
+          <p> Esperando que se unan los jugadores.</p>
+          <br>
+          <div class="buttonsbar"><a class="button" href="#" v-on:click="startGame()">Siguiente</a></div>
+        </div>
+        <div v-show="stage==6">
+          <br>
+          <h2> Diviertete! </h2>
+          <br>
+          <p> MESA DE JUEGO.</p>
+          <br>
+        </div>
     </div>  
-    <script src="src/main.js"></script>
   </main>
   <footer id="footer">
     <p>B.C.G. is powered by Vue.js!</p>
   </footer>
+  <script type="text/javascript" src="src/main.js"></script>
 </body>
 </html>
