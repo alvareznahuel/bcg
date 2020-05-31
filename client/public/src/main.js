@@ -1,7 +1,6 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'W.I.P.',
     user: null,
     signedin: false,
     stage: 0,
