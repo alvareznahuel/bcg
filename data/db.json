@@ -1,6 +1,7 @@
 {
   "ids": {
-    "Card": 5
+    "Card": 5,
+    "Deck": 3
   },
   "models": {
     "Card": {
@@ -8,6 +9,9 @@
       "2": "{\"name\":\"As de diamante\",\"imageURL\":\"resources/01d.gif\",\"id\":2}",
       "3": "{\"name\":\"As de corazón\",\"imageURL\":\"resources/01h.gif\",\"id\":3}",
       "4": "{\"name\":\"As de pica\",\"imageURL\":\"resources/01s.gif\",\"id\":4}"
+    },
+    "Deck": {
+      "1": "{\"name\":\"French cards deck\",\"cards\":[1,2,3,4],\"id\":1}"
     }
   }
 }
