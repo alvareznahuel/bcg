@@ -48,3 +48,20 @@ html, body {
     min-width: 120px;
     justify-content: flex-end;
 }
+.button {
+    padding: 5px;
+    margin: 5px 20px 5px 20px;
+    background-color: white;
+    border-width: 4px;
+    border-color: black;
+    text-decoration: none;
+    border-radius: 10%;
+}
+.buttonsbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}

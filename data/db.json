@@ -1,0 +1,13 @@
+{
+  "ids": {
+    "Card": 5
+  },
+  "models": {
+    "Card": {
+      "1": "{\"name\":\"As de trebol\",\"imageURL\":\"resources/01c.gif\",\"id\":1}",
+      "2": "{\"name\":\"As de diamante\",\"imageURL\":\"resources/01d.gif\",\"id\":2}",
+      "3": "{\"name\":\"As de corazón\",\"imageURL\":\"resources/01h.gif\",\"id\":3}",
+      "4": "{\"name\":\"As de pica\",\"imageURL\":\"resources/01s.gif\",\"id\":4}"
+    }
+  }
+}
