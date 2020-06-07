@@ -29,8 +29,8 @@ To emulate a real game we need cover the next functions:
 | bulks | id | Number | An identifier for a bulk.
 | | gameId | Number | An identifier of the game in which this bulk was created.
 | | playerId | Number | A player identifier from the bulk's owner. In case a public bulk, this value will be null.
-| | face | Boolean | True for a bulk with their cards face up or False for a bulk with their cards face down.
-| | stack | Boolean | True for access to a bottom card or top card only. False when you can access to any card in the bulk.
+| | faceUp | Boolean | True for a bulk with their cards face up or False for a bulk with their cards face down.
+| | stackMode | Boolean | True for access to a bottom card or top card only. False when you can access to any card in the bulk.
 | games | id | Number | An unique identifier for a game session.
 | | name | String | A description for the game.
 | | players | Array | A list of player identifiers joined to the game.
